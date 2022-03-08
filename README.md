@@ -1,7 +1,13 @@
 # KendoApp
-1. Choosing technology ->  2h
+1. Choosing technology ->  2h 
+                       -> Python(BackEnd)
+                       -> PyQT5(FrontEnd)
+                       -> MySql(DB)
 2. Setting up eviroments -> 2h
+                         -> Installing packages + Resources 
+                         -> Setting up Venv 
 3. Research about problems -> 2h
+                          -> Reading about problems with that technology
 4. Collection of requirements -> 2h
 5. Creating GUI (FrontEnd) -> 2h
 6. Creating DB -> 2h
