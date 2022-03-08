@@ -1,0 +1,40 @@
+MainRequirements:
+Organizace závod (Kendo turnaj)
+-> Vytvořen seznam uživatelů (Databáze hráčů)
+-> Z té databáze se přetahují hráči, kteří se budou učastnit turnaje. (Tohle může být omezeno věkem se shora nebo z dola popř technickým stupnem)
+Technické stupně u vesch uměnení stejné(lze dohledat na googlu) Q dan
+
+Na kliknutí se rozlosují do tří členných poolu ( kde bojuje každý s každým) vždy je pořadí v tom poolu. Ten kdo prohrál je poslední nepostupuje
+
+oba postupují do pavouka
+
+Z prvního poolu a jde na pool A a F
+
+První z druhým atd a takhle se skládá pavouk.
+
+Zápasy se hrají na dva body Tj kdo vyhrál dva body vyhrál počítat jak body.
+
+Body pismenama M K T D  H (vyuka odkaz)
+
+na dva vítezné body.
+
+
+E -> prodloužení
+
+X -> Remza
+
+.. -> člověk odstoupil
+UserStories:v
+
+
+Uvodní obrazku
+
+ Přidat hráče  -> GUI Tam vyplní udaje o hráči -> to se vepise to DB
+
+ Vytvořit tunraj -> Definuje podminky turnaje na základě podmine se otevře seznam hrárů, kteří splenují specifika viz nahoře
+ přetahá hráče -> vygnerují se pooly a z toho se dělá pak ten pavouk
+
+
+
+
+ ODebrat hráče -> Možnost odebrat hráče z poolu
