@@ -1,4 +1,5 @@
 import sys
+import mysql.connector 
 from PyQt5.QtWidgets import QApplication, QWidget,QLabel, QVBoxLayout
 app = QApplication(sys.argv)
 w = QWidget()
