@@ -1,8 +1,9 @@
 // SPDX-License-Identifier: MIT
 pragma solidity >=0.4.22 <0.9.0;
+import "@openzeppelin/contracts/access/Ownable.sol";
 
-contract KendoApp {
-    address public owner;
+contract KendoApp  is Ownable{
+    //address public owner;
     struct KendoPlayer {
         string Name;
         string SurName;
@@ -38,10 +39,10 @@ contract KendoApp {
     TechnicalGrade choice;
 
     constructor() {
-        owner = msg.sender;
+        //owner = msg.sender;
     }
 
-    function addKendoPlayer(
+    function addKendoPlayer (
         address addr,
         string memory name,
         string memory surname,
@@ -71,7 +72,7 @@ contract KendoApp {
         uint256 maxAge,
         TechnicalGrade minTechnicalGrade,
         TechnicalGrade maxTechnicalGrade
-    ) external {
+    ) external onlyOwner {
         for (uint256 i = 0; i < mapSize; i++) {
             address addr = KendoPlayersAddresses[i];
             if (
@@ -89,7 +90,7 @@ contract KendoApp {
         return ActivePlayersInTournament;
     }
 
-    function CreateBracket(uint256 sizeoftour) external {}
+    function CreateBracket(uint256 sizeoftour) external onlyOwner{}
 
     // Solidity pseudo-random function:
     function random() private view returns (uint256) {
@@ -108,7 +109,7 @@ contract KendoApp {
         // players is an array of entrants
     }
 
-    function remove(uint256 index) public {
+    function remove(uint256 index) private {
         ActivePlayersInTournament[index] = ActivePlayersInTournament[
             ActivePlayersInTournament.length - 1
         ];
@@ -116,7 +117,7 @@ contract KendoApp {
     }
 
     // invoke random function in a pickWinner example function
-    function pickWinner() public returns (uint256) {
+    function pickWinner() private returns (uint256) {
         uint256 index = random() % ActivePlayersInTournament.length;
         remove(index);
         return index;
